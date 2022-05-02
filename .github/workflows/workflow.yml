@@ -11,9 +11,9 @@ jobs:
   build_backend:
     name: Build Node Backend
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: node-backend
+    #defaults:
+    #  run:
+    #    working-directory: node-backend
     steps:
     
     - uses: actions/checkout@v3

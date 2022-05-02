@@ -1,7 +1,7 @@
 FROM node:17
 WORKDIR /usr/src/app
-#COPY vue-frontend/ ./vue-frontend/
-#RUN cd vue-frontend
+COPY ./ ./vue-frontend/
+RUN cd vue-frontend
 RUN npm install && npm run build
 RUN ls
 

@@ -1,7 +1,7 @@
 FROM node:17
 WORKDIR /usr/src/app
-#COPY node-backend/ ./node-backend/
-#RUN cd node-backend
+COPY ./ ./node-backend/
+RUN cd node-backend
 RUN npm install && npm run build
 RUN ls
 

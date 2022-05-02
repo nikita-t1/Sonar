@@ -13,5 +13,5 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api', (request, response) => {
-    response.send("API");
+    response.send("API ");
 })

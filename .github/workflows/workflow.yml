@@ -11,9 +11,9 @@ jobs:
   build_backend:
     name: Build Node Backend
     runs-on: ubuntu-latest
-    #defaults:
-    #  run:
-    #    working-directory: node-backend
+    defaults:
+      run:
+        working-directory: node-backend
     steps:
     
     - uses: actions/checkout@v3
@@ -46,7 +46,7 @@ jobs:
       #if: steps.filter.outputs.Backend == 'true'
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: ./node-backend
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sonar-node-backend:latest

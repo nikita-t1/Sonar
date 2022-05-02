@@ -3,6 +3,7 @@ WORKDIR /usr/src/app/node-backend
 COPY package*.json ./
 COPY package*.json /usr/src/app/node-backend/
 
+RUN cd /usr/src/app/node-backend
 RUN echo $(ls -la)
 RUN echo $(pwd)
 

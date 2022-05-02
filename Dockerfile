@@ -2,8 +2,8 @@ FROM node:17
 WORKDIR /usr/src/app
 COPY package*.json ./
 
-#COPY Dockerfile ./
-#COPY Dockerfile ./node-backend/
+COPY Dockerfile ./
+COPY Dockerfile ./node-backend/
 
 RUN npm install
 COPY . .

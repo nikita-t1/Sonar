@@ -47,6 +47,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./Dockerfile
+        file: ./node-backend/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sonar-node-backend:latest

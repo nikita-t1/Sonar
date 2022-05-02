@@ -1,6 +1,6 @@
 FROM node:17
 WORKDIR /usr/src/app
-COPY node-backend/ ./node-backend/
+COPY ../node-backend/ ./node-backend/
 
 COPY package*.json ./
 

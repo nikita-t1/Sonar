@@ -1,7 +1,7 @@
 FROM node:17
 WORKDIR /usr/src/app/node-backend
 COPY package*.json ./
-COPY Dockerfile ./node-backend/
+COPY ./node-backend/Dockerfile ./
 RUN npm install
 COPY . .
 RUN echo $(ls)

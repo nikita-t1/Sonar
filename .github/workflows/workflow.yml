@@ -18,12 +18,12 @@ jobs:
     
     - uses: actions/checkout@v3
 
-    - uses: dorny/paths-filter@v2
-      id: filter
-      with:
-        filters: |
-            Backend:
-              - 'node-backend/**'  
+    #- uses: dorny/paths-filter@v2
+    #  id: filter
+    #  with:
+    #    filters: |
+    #        Backend:
+    #          - 'node-backend/**'  
 
     - name: Build the Docker image
       #if: steps.filter.outputs.Backend == 'true'

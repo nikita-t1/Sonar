@@ -11,3 +11,7 @@ app.listen(port, hostname, () => {
 app.get('/', (request, response) => {
     response.send("SUCCESS");
 })
+
+app.get('/api', (request, response) => {
+    response.send("API");
+})

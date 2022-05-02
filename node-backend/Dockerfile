@@ -1,9 +1,9 @@
 FROM node:17
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/node-backend
 RUN ls
-COPY ./ ./node-backend/
+#COPY ./ ./node-backend/
 RUN ls
-RUN cd node-backend
+#RUN cd node-backend
 RUN ls
 RUN npm install && npm run build
 RUN ls

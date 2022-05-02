@@ -3,7 +3,7 @@ WORKDIR /usr/src/app/node-backend
 RUN echo $(ls)
 RUN echo $(pwd)
 COPY package*.json ./
-RUN npm install && npm run build
+RUN npm install
 COPY . .
 
 EXPOSE 8180

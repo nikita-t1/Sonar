@@ -27,7 +27,7 @@ jobs:
 
     - name: Build the Docker image
       #if: steps.filter.outputs.Backend == 'true'
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag sonar-node-backend:$(date +%s)
     
     - name: Login to Docker Hub
       #if: steps.filter.outputs.Backend == 'true'
@@ -44,7 +44,7 @@ jobs:
       #if: steps.filter.outputs.Backend == 'true'
       uses: docker/build-push-action@v2
       with:
-        context: ./node-backend/
+        context: .
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sonar-node-backend:latest
@@ -68,7 +68,7 @@ jobs:
 
     - name: Build the Docker image
       #if: steps.filter.outputs.Frontend == 'true'
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag sonar-vue-frontend:$(date +%s)
     
     - name: Login to Docker Hub
       #if: steps.filter.outputs.Frontend == 'true'

@@ -2,7 +2,7 @@ FROM node:17
 WORKDIR /usr/src/app/vue-frontend
 COPY package*.json ./
 RUN npm install
-RUN npm run build
+#RUN npm run build
 COPY . .
 
 RUN echo $(ls)

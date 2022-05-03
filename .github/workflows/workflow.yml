@@ -33,9 +33,9 @@ jobs:
         buildkitd-flags: --debug
 
     - name: ls
-          run: |
-              echo "Root Directory"
-              ls -1lta .
+      run: |
+          echo "Root Directory"
+          ls -1lta .
 
     - name: Build and push
       uses: docker/build-push-action@v2

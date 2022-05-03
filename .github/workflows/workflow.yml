@@ -35,6 +35,7 @@ jobs:
     - name: ls
       run: |
           echo "Root Directory"
+          pwd
           ls -1lta .
 
     - name: Build and push

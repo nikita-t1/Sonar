@@ -1,10 +1,10 @@
 FROM node:17
 WORKDIR /usr/src/app
 RUN echo $(ls -1lta)
-ADD . ./Sonar/
+COPY . ./Sonar/
+COPY package*.json ./Sonar/
+COPY ./src/ ./Sonar/src/
 RUN echo $(ls -1lta)
-
-#COPY package*.json ./
 
 RUN cd /usr/src/app/Sonar/
 WORKDIR /usr/src/app/Sonar/
@@ -18,7 +18,7 @@ WORKDIR /usr/src/app/Sonar/node-backend
 RUN echo $(ls -1lta)
 
 RUN npm install
-ADD . .
+COPY . .
 RUN echo $(ls -lta)
 RUN echo $(pwd)
 

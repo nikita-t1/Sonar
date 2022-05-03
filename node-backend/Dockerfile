@@ -1,6 +1,7 @@
 FROM node:17
 WORKDIR /usr/src/app
-COPY . .
+RUN echo $(ls -1lta)
+COPY . ./Sonar/
 RUN echo $(ls -1lta)
 
 #COPY package*.json ./

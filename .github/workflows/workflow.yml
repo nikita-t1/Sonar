@@ -37,12 +37,12 @@ jobs:
           echo "Root Directory"
           pwd
           ls -1lta .
+          ls -lta /tmp/
 
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
         #context: /home/runner/work/Sonar/Sonar/node-backend/
         file: ./Dockerfile
-        load: true
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sonar-node-backend:latest

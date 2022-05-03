@@ -1,20 +1,20 @@
 FROM node:17
 WORKDIR /usr/src/app
 COPY . ./Sonar/
-RUN echo $(ls -lta)
+RUN echo $(ls -1lta)
 
 #COPY package*.json ./
 
 RUN cd /usr/src/app/Sonar/
 WORKDIR /usr/src/app/Sonar/
-RUN echo $(ls -lta)
+RUN echo $(ls -1lta)
 
 RUN echo $(ls -lta)
 RUN echo $(pwd)
 
 RUN npm install
 COPY . .
-RUN echo $(ls)
+RUN echo $(ls -lta)
 RUN echo $(pwd)
 
 EXPOSE 8180

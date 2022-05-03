@@ -9,16 +9,6 @@ RUN cd /usr/src/app/Sonar/
 WORKDIR /usr/src/app/Sonar/
 RUN echo $(ls -lta)
 
-RUN cd Sonar/
-WORKDIR /usr/src/app/Sonar/Sonar/
-RUN echo $(ls -lta)
-
-RUN cd node-backend/
-WORKDIR /usr/src/app/Sonar/Sonar/node-backend/
-RUN echo $(ls -lta)
-
-WORKDIR /usr/src/app/Sonar/
-
 RUN echo $(ls -lta)
 RUN echo $(pwd)
 

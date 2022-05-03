@@ -13,8 +13,8 @@ RUN echo $(ls -1lta)
 RUN echo $(ls -lta)
 RUN echo $(pwd)
 
-RUN cd /usr/src/app/Sonar/node-backend
-WORKDIR /usr/src/app/Sonar/node-backend
+RUN cd /usr/src/app/Sonar/
+WORKDIR /usr/src/app/Sonar/
 RUN echo $(ls -1lta)
 
 RUN npm install

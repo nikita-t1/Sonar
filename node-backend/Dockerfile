@@ -4,7 +4,7 @@ COPY . ./Sonar/
 
 #COPY package*.json ./
 
-RUN cd Sonar/node-backend/
+RUN cd /usr/src/app/Sonar/node-backend/
 WORKDIR /usr/src/app/Sonar/node-backend/
 
 RUN echo $(ls -la)

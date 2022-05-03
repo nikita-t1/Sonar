@@ -1,11 +1,11 @@
 FROM node:17
 WORKDIR /usr/src/app
-COPY ./node-backend/ ./node-backend/
+COPY . ./Sonar/
 
-COPY package*.json ./
+#COPY package*.json ./
 
-RUN cd node-backend
-WORKDIR /usr/src/app/node-backend
+RUN cd Sonar/node-backend/
+WORKDIR /usr/src/app/Sonar/node-backend/
 
 RUN echo $(ls -la)
 RUN echo $(pwd)

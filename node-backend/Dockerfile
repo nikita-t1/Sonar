@@ -5,8 +5,11 @@ RUN echo $(ls -lta)
 
 #COPY package*.json ./
 
-RUN cd /usr/src/app/Sonar/node-backend/
-WORKDIR /usr/src/app/Sonar/node-backend/
+RUN cd /usr/src/app/Sonar/
+RUN echo $(ls -lta)
+
+
+WORKDIR /usr/src/app/Sonar/
 
 RUN echo $(ls -lta)
 RUN echo $(pwd)

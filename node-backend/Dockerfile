@@ -5,6 +5,7 @@ COPY . ./node-backend/
 COPY package*.json ./
 
 RUN cd node-backend
+WORKDIR /usr/src/app/node-backend
 
 RUN echo $(ls -la)
 RUN echo $(pwd)
